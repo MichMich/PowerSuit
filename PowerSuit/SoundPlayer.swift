@@ -76,7 +76,9 @@ class SoundPlayer: NSObject, AVAudioPlayerDelegate {
     }
     
     func stop() {
-        audioPlayer.stop()
+        if let audioPlayer = self.audioPlayer {
+            audioPlayer.stop()
+        }
     }
     
     func clearQueue() {

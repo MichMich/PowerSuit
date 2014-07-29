@@ -11,20 +11,20 @@ import Foundation
 
 class PowerSuitRowItem {
     var title:String
-    init(title:String) {
+    var hue:Float = 1
+    init(title:String, hue:Float) {
         self.title = title
+        self.hue = hue
     }
 }
 
 class PowerSuitActionItem:PowerSuitRowItem {
     var action:()->()
-    init(title:String, action:()->()) {
+    init(title:String, hue:Float, action:()->()) {
         self.action = action
-        super.init(title:title)
+        super.init(title:title, hue:hue)
     }
 }
-
-
 
 enum SoundType {
     case Voice
@@ -36,9 +36,9 @@ class PowerSuitSoundItem:PowerSuitRowItem {
     var sound:String
     var type:SoundType
     var playing = false
-    init(title:String, sound:String, type:SoundType) {
+    init(title:String, hue:Float, sound:String, type:SoundType) {
         self.sound = sound
         self.type = type
-        super.init(title:title)
+        super.init(title:title, hue:hue)
     }
 }

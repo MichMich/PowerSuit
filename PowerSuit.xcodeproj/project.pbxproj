@@ -11,8 +11,6 @@
 		4C6B09E8198785F400A99A2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C6B09E6198785F400A99A2E /* Main.storyboard */; };
 		4C6B09EA198785F400A99A2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C6B09E9198785F400A99A2E /* Images.xcassets */; };
 		4C6B09F6198785F400A99A2E /* PowerSuitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6B09F5198785F400A99A2E /* PowerSuitTests.swift */; };
-		4C6B0A001987864C00A99A2E /* PowerSuitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6B09FF1987864C00A99A2E /* PowerSuitCell.swift */; };
-		4C6B0A021987866100A99A2E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6B0A011987866100A99A2E /* TableViewController.swift */; };
 		4C6B0A04198786E900A99A2E /* PowerSuitItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6B0A03198786E900A99A2E /* PowerSuitItems.swift */; };
 		4C6B0A0B19878CE400A99A2E /* sound4.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C6B0A0619878CE400A99A2E /* sound4.aiff */; };
 		4C6B0A0C19878CE400A99A2E /* sound3.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C6B0A0719878CE400A99A2E /* sound3.aiff */; };
@@ -34,6 +32,10 @@
 		4CB783941987D03F00E622A0 /* right_wing_down.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4CB7838E1987D03F00E622A0 /* right_wing_down.aiff */; };
 		4CB783951987D03F00E622A0 /* right_wing_up.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4CB7838F1987D03F00E622A0 /* right_wing_up.aiff */; };
 		4CB783971987DCD400E622A0 /* description.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4CB783961987DCD400E622A0 /* description.wav */; };
+		4CDEFAEF1987EEC50045EE25 /* PowerSuitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEFAEE1987EEC50045EE25 /* PowerSuitCell.swift */; };
+		4CDEFAF11987EEF20045EE25 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEFAF01987EEF20045EE25 /* CollectionViewController.swift */; };
+		4CDEFAF3198809870045EE25 /* CellBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEFAF2198809870045EE25 /* CellBackgroundView.swift */; };
+		4CDEFAF5198817180045EE25 /* PowerSuitHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEFAF4198817180045EE25 /* PowerSuitHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +57,6 @@
 		4C6B09EF198785F400A99A2E /* PowerSuitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PowerSuitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C6B09F4198785F400A99A2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C6B09F5198785F400A99A2E /* PowerSuitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerSuitTests.swift; sourceTree = "<group>"; };
-		4C6B09FF1987864C00A99A2E /* PowerSuitCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerSuitCell.swift; sourceTree = "<group>"; };
-		4C6B0A011987866100A99A2E /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		4C6B0A03198786E900A99A2E /* PowerSuitItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerSuitItems.swift; sourceTree = "<group>"; };
 		4C6B0A0619878CE400A99A2E /* sound4.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = sound4.aiff; sourceTree = "<group>"; };
 		4C6B0A0719878CE400A99A2E /* sound3.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = sound3.aiff; sourceTree = "<group>"; };
@@ -78,6 +78,10 @@
 		4CB7838E1987D03F00E622A0 /* right_wing_down.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = right_wing_down.aiff; sourceTree = "<group>"; };
 		4CB7838F1987D03F00E622A0 /* right_wing_up.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = right_wing_up.aiff; sourceTree = "<group>"; };
 		4CB783961987DCD400E622A0 /* description.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = description.wav; sourceTree = "<group>"; };
+		4CDEFAEE1987EEC50045EE25 /* PowerSuitCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerSuitCell.swift; sourceTree = "<group>"; };
+		4CDEFAF01987EEF20045EE25 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		4CDEFAF2198809870045EE25 /* CellBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellBackgroundView.swift; sourceTree = "<group>"; };
+		4CDEFAF4198817180045EE25 /* PowerSuitHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerSuitHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,12 +126,14 @@
 				4C6B0A0519878CD700A99A2E /* Sounds */,
 				4C6B09E2198785F400A99A2E /* AppDelegate.swift */,
 				4C6B0A1019878D1B00A99A2E /* SoundPlayer.swift */,
-				4C6B0A011987866100A99A2E /* TableViewController.swift */,
+				4CDEFAF01987EEF20045EE25 /* CollectionViewController.swift */,
 				4C6B0A03198786E900A99A2E /* PowerSuitItems.swift */,
 				4C6B09E6198785F400A99A2E /* Main.storyboard */,
 				4C6B09E9198785F400A99A2E /* Images.xcassets */,
 				4C6B09E0198785F400A99A2E /* Supporting Files */,
-				4C6B09FF1987864C00A99A2E /* PowerSuitCell.swift */,
+				4CDEFAEE1987EEC50045EE25 /* PowerSuitCell.swift */,
+				4CDEFAF4198817180045EE25 /* PowerSuitHeader.swift */,
+				4CDEFAF2198809870045EE25 /* CellBackgroundView.swift */,
 			);
 			path = PowerSuit;
 			sourceTree = "<group>";
@@ -326,10 +332,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CDEFAF11987EEF20045EE25 /* CollectionViewController.swift in Sources */,
+				4CDEFAEF1987EEC50045EE25 /* PowerSuitCell.swift in Sources */,
+				4CDEFAF3198809870045EE25 /* CellBackgroundView.swift in Sources */,
+				4CDEFAF5198817180045EE25 /* PowerSuitHeader.swift in Sources */,
 				4C6B0A1119878D1B00A99A2E /* SoundPlayer.swift in Sources */,
-				4C6B0A001987864C00A99A2E /* PowerSuitCell.swift in Sources */,
 				4C6B09E3198785F400A99A2E /* AppDelegate.swift in Sources */,
-				4C6B0A021987866100A99A2E /* TableViewController.swift in Sources */,
 				4C6B0A04198786E900A99A2E /* PowerSuitItems.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
