@@ -8,10 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		4C6B09E3198785F400A99A2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6B09E2198785F400A99A2E /* AppDelegate.swift */; };
-		4C6B09E5198785F400A99A2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6B09E4198785F400A99A2E /* ViewController.swift */; };
 		4C6B09E8198785F400A99A2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C6B09E6198785F400A99A2E /* Main.storyboard */; };
 		4C6B09EA198785F400A99A2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C6B09E9198785F400A99A2E /* Images.xcassets */; };
 		4C6B09F6198785F400A99A2E /* PowerSuitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6B09F5198785F400A99A2E /* PowerSuitTests.swift */; };
+		4C6B0A001987864C00A99A2E /* PowerSuitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6B09FF1987864C00A99A2E /* PowerSuitCell.swift */; };
+		4C6B0A021987866100A99A2E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6B0A011987866100A99A2E /* TableViewController.swift */; };
+		4C6B0A04198786E900A99A2E /* PowerSuitItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6B0A03198786E900A99A2E /* PowerSuitItems.swift */; };
+		4C6B0A0B19878CE400A99A2E /* sound4.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C6B0A0619878CE400A99A2E /* sound4.aiff */; };
+		4C6B0A0C19878CE400A99A2E /* sound3.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C6B0A0719878CE400A99A2E /* sound3.aiff */; };
+		4C6B0A0D19878CE400A99A2E /* sound5.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C6B0A0819878CE400A99A2E /* sound5.aiff */; };
+		4C6B0A0E19878CE400A99A2E /* sound2.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C6B0A0919878CE400A99A2E /* sound2.aiff */; };
+		4C6B0A0F19878CE400A99A2E /* sound1.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C6B0A0A19878CE400A99A2E /* sound1.aiff */; };
+		4C6B0A1119878D1B00A99A2E /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6B0A1019878D1B00A99A2E /* SoundPlayer.swift */; };
+		4C70F8461987A0E400DF598B /* transformers.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4C70F8451987A0E400DF598B /* transformers.wav */; };
+		4C70F8491987A1B600DF598B /* robot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4C70F8481987A1B600DF598B /* robot.wav */; };
+		4CB7837F1987C92600E622A0 /* beat.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4CB7837E1987C92600E622A0 /* beat.aiff */; };
+		4CB783821987CDAE00E622A0 /* beep.aif in Resources */ = {isa = PBXBuildFile; fileRef = 4CB783801987CDAE00E622A0 /* beep.aif */; };
+		4CB783831987CDAE00E622A0 /* radioscatter.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4CB783811987CDAE00E622A0 /* radioscatter.wav */; };
+		4CB783881987CF3F00E622A0 /* swoosh.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4CB783851987CF3F00E622A0 /* swoosh.wav */; };
+		4CB783891987CF3F00E622A0 /* ufo.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4CB783861987CF3F00E622A0 /* ufo.wav */; };
+		4CB783901987D03F00E622A0 /* both_wings_down.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4CB7838A1987D03F00E622A0 /* both_wings_down.aiff */; };
+		4CB783911987D03F00E622A0 /* both_wings_up.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4CB7838B1987D03F00E622A0 /* both_wings_up.aiff */; };
+		4CB783921987D03F00E622A0 /* left_wing_down.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4CB7838C1987D03F00E622A0 /* left_wing_down.aiff */; };
+		4CB783931987D03F00E622A0 /* left_wing_up.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4CB7838D1987D03F00E622A0 /* left_wing_up.aiff */; };
+		4CB783941987D03F00E622A0 /* right_wing_down.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4CB7838E1987D03F00E622A0 /* right_wing_down.aiff */; };
+		4CB783951987D03F00E622A0 /* right_wing_up.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4CB7838F1987D03F00E622A0 /* right_wing_up.aiff */; };
+		4CB783971987DCD400E622A0 /* description.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4CB783961987DCD400E622A0 /* description.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,12 +50,34 @@
 		4C6B09DD198785F400A99A2E /* PowerSuit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PowerSuit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C6B09E1198785F400A99A2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C6B09E2198785F400A99A2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4C6B09E4198785F400A99A2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4C6B09E7198785F400A99A2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C6B09E9198785F400A99A2E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4C6B09EF198785F400A99A2E /* PowerSuitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PowerSuitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C6B09F4198785F400A99A2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C6B09F5198785F400A99A2E /* PowerSuitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerSuitTests.swift; sourceTree = "<group>"; };
+		4C6B09FF1987864C00A99A2E /* PowerSuitCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerSuitCell.swift; sourceTree = "<group>"; };
+		4C6B0A011987866100A99A2E /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		4C6B0A03198786E900A99A2E /* PowerSuitItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerSuitItems.swift; sourceTree = "<group>"; };
+		4C6B0A0619878CE400A99A2E /* sound4.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = sound4.aiff; sourceTree = "<group>"; };
+		4C6B0A0719878CE400A99A2E /* sound3.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = sound3.aiff; sourceTree = "<group>"; };
+		4C6B0A0819878CE400A99A2E /* sound5.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = sound5.aiff; sourceTree = "<group>"; };
+		4C6B0A0919878CE400A99A2E /* sound2.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = sound2.aiff; sourceTree = "<group>"; };
+		4C6B0A0A19878CE400A99A2E /* sound1.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = sound1.aiff; sourceTree = "<group>"; };
+		4C6B0A1019878D1B00A99A2E /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		4C70F8451987A0E400DF598B /* transformers.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = transformers.wav; sourceTree = "<group>"; };
+		4C70F8481987A1B600DF598B /* robot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = robot.wav; sourceTree = "<group>"; };
+		4CB7837E1987C92600E622A0 /* beat.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = beat.aiff; sourceTree = "<group>"; };
+		4CB783801987CDAE00E622A0 /* beep.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = beep.aif; sourceTree = "<group>"; };
+		4CB783811987CDAE00E622A0 /* radioscatter.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = radioscatter.wav; sourceTree = "<group>"; };
+		4CB783851987CF3F00E622A0 /* swoosh.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = swoosh.wav; sourceTree = "<group>"; };
+		4CB783861987CF3F00E622A0 /* ufo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ufo.wav; sourceTree = "<group>"; };
+		4CB7838A1987D03F00E622A0 /* both_wings_down.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = both_wings_down.aiff; sourceTree = "<group>"; };
+		4CB7838B1987D03F00E622A0 /* both_wings_up.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = both_wings_up.aiff; sourceTree = "<group>"; };
+		4CB7838C1987D03F00E622A0 /* left_wing_down.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = left_wing_down.aiff; sourceTree = "<group>"; };
+		4CB7838D1987D03F00E622A0 /* left_wing_up.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = left_wing_up.aiff; sourceTree = "<group>"; };
+		4CB7838E1987D03F00E622A0 /* right_wing_down.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = right_wing_down.aiff; sourceTree = "<group>"; };
+		4CB7838F1987D03F00E622A0 /* right_wing_up.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = right_wing_up.aiff; sourceTree = "<group>"; };
+		4CB783961987DCD400E622A0 /* description.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = description.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,11 +119,15 @@
 		4C6B09DF198785F400A99A2E /* PowerSuit */ = {
 			isa = PBXGroup;
 			children = (
+				4C6B0A0519878CD700A99A2E /* Sounds */,
 				4C6B09E2198785F400A99A2E /* AppDelegate.swift */,
-				4C6B09E4198785F400A99A2E /* ViewController.swift */,
+				4C6B0A1019878D1B00A99A2E /* SoundPlayer.swift */,
+				4C6B0A011987866100A99A2E /* TableViewController.swift */,
+				4C6B0A03198786E900A99A2E /* PowerSuitItems.swift */,
 				4C6B09E6198785F400A99A2E /* Main.storyboard */,
 				4C6B09E9198785F400A99A2E /* Images.xcassets */,
 				4C6B09E0198785F400A99A2E /* Supporting Files */,
+				4C6B09FF1987864C00A99A2E /* PowerSuitCell.swift */,
 			);
 			path = PowerSuit;
 			sourceTree = "<group>";
@@ -107,6 +155,56 @@
 				4C6B09F4198785F400A99A2E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4C6B0A0519878CD700A99A2E /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				4C70F8531987A7A300DF598B /* loop */,
+				4C70F8471987A0E800DF598B /* voice */,
+				4C70F8441987A0E400DF598B /* effects */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		4C70F8441987A0E400DF598B /* effects */ = {
+			isa = PBXGroup;
+			children = (
+				4CB783851987CF3F00E622A0 /* swoosh.wav */,
+				4CB783861987CF3F00E622A0 /* ufo.wav */,
+				4C70F8481987A1B600DF598B /* robot.wav */,
+				4C70F8451987A0E400DF598B /* transformers.wav */,
+			);
+			path = effects;
+			sourceTree = "<group>";
+		};
+		4C70F8471987A0E800DF598B /* voice */ = {
+			isa = PBXGroup;
+			children = (
+				4CB783961987DCD400E622A0 /* description.wav */,
+				4CB7838A1987D03F00E622A0 /* both_wings_down.aiff */,
+				4CB7838B1987D03F00E622A0 /* both_wings_up.aiff */,
+				4CB7838C1987D03F00E622A0 /* left_wing_down.aiff */,
+				4CB7838D1987D03F00E622A0 /* left_wing_up.aiff */,
+				4CB7838E1987D03F00E622A0 /* right_wing_down.aiff */,
+				4CB7838F1987D03F00E622A0 /* right_wing_up.aiff */,
+				4C6B0A0619878CE400A99A2E /* sound4.aiff */,
+				4C6B0A0719878CE400A99A2E /* sound3.aiff */,
+				4C6B0A0819878CE400A99A2E /* sound5.aiff */,
+				4C6B0A0919878CE400A99A2E /* sound2.aiff */,
+				4C6B0A0A19878CE400A99A2E /* sound1.aiff */,
+			);
+			name = voice;
+			sourceTree = "<group>";
+		};
+		4C70F8531987A7A300DF598B /* loop */ = {
+			isa = PBXGroup;
+			children = (
+				4CB783801987CDAE00E622A0 /* beep.aif */,
+				4CB783811987CDAE00E622A0 /* radioscatter.wav */,
+				4CB7837E1987C92600E622A0 /* beat.aiff */,
+			);
+			name = loop;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +256,7 @@
 				TargetAttributes = {
 					4C6B09DC198785F300A99A2E = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 9ZW6KB2LSP;
 					};
 					4C6B09EE198785F400A99A2E = {
 						CreatedOnToolsVersion = 6.0;
@@ -189,8 +288,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C6B0A0D19878CE400A99A2E /* sound5.aiff in Resources */,
+				4CB783941987D03F00E622A0 /* right_wing_down.aiff in Resources */,
+				4CB7837F1987C92600E622A0 /* beat.aiff in Resources */,
 				4C6B09E8198785F400A99A2E /* Main.storyboard in Resources */,
+				4CB783951987D03F00E622A0 /* right_wing_up.aiff in Resources */,
+				4CB783881987CF3F00E622A0 /* swoosh.wav in Resources */,
+				4C70F8461987A0E400DF598B /* transformers.wav in Resources */,
+				4C70F8491987A1B600DF598B /* robot.wav in Resources */,
+				4CB783921987D03F00E622A0 /* left_wing_down.aiff in Resources */,
+				4CB783891987CF3F00E622A0 /* ufo.wav in Resources */,
+				4CB783931987D03F00E622A0 /* left_wing_up.aiff in Resources */,
+				4C6B0A0F19878CE400A99A2E /* sound1.aiff in Resources */,
+				4C6B0A0E19878CE400A99A2E /* sound2.aiff in Resources */,
+				4CB783971987DCD400E622A0 /* description.wav in Resources */,
 				4C6B09EA198785F400A99A2E /* Images.xcassets in Resources */,
+				4CB783821987CDAE00E622A0 /* beep.aif in Resources */,
+				4CB783831987CDAE00E622A0 /* radioscatter.wav in Resources */,
+				4CB783901987D03F00E622A0 /* both_wings_down.aiff in Resources */,
+				4C6B0A0B19878CE400A99A2E /* sound4.aiff in Resources */,
+				4CB783911987D03F00E622A0 /* both_wings_up.aiff in Resources */,
+				4C6B0A0C19878CE400A99A2E /* sound3.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,8 +326,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C6B09E5198785F400A99A2E /* ViewController.swift in Sources */,
+				4C6B0A1119878D1B00A99A2E /* SoundPlayer.swift in Sources */,
+				4C6B0A001987864C00A99A2E /* PowerSuitCell.swift in Sources */,
 				4C6B09E3198785F400A99A2E /* AppDelegate.swift in Sources */,
+				4C6B0A021987866100A99A2E /* TableViewController.swift in Sources */,
+				4C6B0A04198786E900A99A2E /* PowerSuitItems.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,9 +448,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PowerSuit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -338,9 +463,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PowerSuit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -397,6 +526,7 @@
 				4C6B09FB198785F400A99A2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C6B09FC198785F400A99A2E /* Build configuration list for PBXNativeTarget "PowerSuitTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +535,7 @@
 				4C6B09FE198785F400A99A2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
