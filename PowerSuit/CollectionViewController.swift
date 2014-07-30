@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVFoundation
+
 
 struct Section {
     var name:String
@@ -24,12 +26,13 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     
     
     
-    
+    let movieView = UIView()
     
     let soundVoicePlayer = SoundPlayer()
     let soundEffectPlayer = SoundPlayer()
     let soundBackgroundLoopPlayer = SoundPlayer()
     
+
     
 
     
@@ -39,11 +42,26 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        collectionView.backgroundColor = UIColor.clearColor()
+        
+        
+
+        
+        
+        
+        view.insertSubview(movieView, belowSubview: collectionView)
+        movieView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options: nil, metrics: nil, views: ["view":movieView]))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options: nil, metrics: nil, views: ["view":movieView]))
+        movieView.backgroundColor = UIColor.redColor()
+
+        
         collectionView.registerClass(PowerSuitCell.self, forCellWithReuseIdentifier: CellIdentifier)
         collectionView.registerClass(PowerSuitHeader.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: HeaderIdentifier)
         
         
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        collectionView.contentInset = UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 20)
         
         
         sections = [
@@ -147,13 +165,13 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     
     func collectionView(collectionView: UICollectionView!, layout collectionViewLayout: UICollectionViewLayout!, sizeForItemAtIndexPath indexPath: NSIndexPath!) -> CGSize
     {
-        return CGSize(width: 100, height: 100)
+        return CGSize(width: 80, height: 80)
     }
     func collectionView(collectionView: UICollectionView!, layout collectionViewLayout: UICollectionViewLayout!, insetForSectionAtIndex section: Int) -> UIEdgeInsets
     {
         return UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
     }
-    // func collectionView(collectionView: UICollectionView!, layout collectionViewLayout: UICollectionViewLayout!, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat
+
     func collectionView(collectionView: UICollectionView!, layout collectionViewLayout: UICollectionViewLayout!, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat
     {
         return 10

@@ -11,6 +11,17 @@ import UIKit
 class CellBackgroundView: UIView {
     
 
+    init(coder aDecoder: NSCoder!)
+    {
+        super.init(coder: aDecoder)
+        self.backgroundColor = UIColor.clearColor()
+    }
+    init(frame: CGRect)
+    {
+        super.init(frame: frame)
+        self.backgroundColor = UIColor.clearColor()
+    }
+    
     var hue:Float = 1.0 {
         didSet {
             setNeedsDisplay()
