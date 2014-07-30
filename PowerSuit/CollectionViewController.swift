@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import AVFoundation
-
+import MediaPlayer
 
 struct Section {
     var name:String
@@ -17,45 +16,41 @@ struct Section {
 
 class CollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
-    
-    
-    
-    
     let CellIdentifier = "CellIdentifier"
     let HeaderIdentifier = "HeaderIdentifier"
-    
-    
-    
-    let movieView = UIView()
-    
+
+    let moviePlayerController=MPMoviePlayerController(contentURL: NSBundle.mainBundle().URLForResource("bluefade_pixel", withExtension: "mp4"))
+
     let soundVoicePlayer = SoundPlayer()
     let soundEffectPlayer = SoundPlayer()
     let soundBackgroundLoopPlayer = SoundPlayer()
     
-
-    
-
-    
     var sectionNames:[String] = []
     var sections:[Section] = []
     
+}
+
+// MARK: - Subclassed functions
+extension CollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
         collectionView.backgroundColor = UIColor.clearColor()
         
         
+        moviePlayerController.controlStyle = MPMovieControlStyle.None
+        moviePlayerController.repeatMode = MPMovieRepeatMode.One
+        moviePlayerController.scalingMode = MPMovieScalingMode.AspectFill
+        
+        
+        view.insertSubview(moviePlayerController.view, belowSubview: collectionView)
+        moviePlayerController.view.setTranslatesAutoresizingMaskIntoConstraints(false)
+        
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options: nil, metrics: nil, views: ["view":moviePlayerController.view]))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options: nil, metrics: nil, views: ["view":moviePlayerController.view]))
+
 
         
-        
-        
-        view.insertSubview(movieView, belowSubview: collectionView)
-        movieView.setTranslatesAutoresizingMaskIntoConstraints(false)
-        
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options: nil, metrics: nil, views: ["view":movieView]))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options: nil, metrics: nil, views: ["view":movieView]))
-        movieView.backgroundColor = UIColor.redColor()
-
         
         collectionView.registerClass(PowerSuitCell.self, forCellWithReuseIdentifier: CellIdentifier)
         collectionView.registerClass(PowerSuitHeader.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: HeaderIdentifier)
@@ -101,6 +96,16 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         ]
 
     }
+    
+    override func viewDidAppear(animated: Bool)
+    {
+        moviePlayerController.play()
+    }
+    
+    override func viewDidDisappear(animated: Bool)
+    {
+        moviePlayerController.stop()
+    }
 
     override func prefersStatusBarHidden() -> Bool
     {
@@ -108,7 +113,10 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     }
     
     
-    // MARK: - Collection View Data Source Methods
+}
+
+// MARK: - Collection View Data Source Methods
+extension CollectionViewController {
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView!) -> Int
     {
         return sections.count
@@ -182,41 +190,40 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         return CGSize(width: view.bounds.size.width, height: 40)
     }
     
-    // MARK: - Collection View Delegate Methods
+    
+    
+}
+
+// MARK: - Collection View Delegate Methods
+extension CollectionViewController {
+    
     override func collectionView(collectionView: UICollectionView!, didSelectItemAtIndexPath indexPath: NSIndexPath!)
     {
         let cell = collectionView.cellForItemAtIndexPath(indexPath) as PowerSuitCell
         
         switch sections[indexPath.section].items[indexPath.row] {
-        case let item as PowerSuitActionItem:
-            item.action()
-            cell.pulse()
-        case let item as PowerSuitSoundItem:
-            
-            
-            switch item.type {
-            case .Voice:
+            case let item as PowerSuitActionItem:
+                item.action()
                 cell.pulse()
-                soundVoicePlayer.queueSound(item.sound)
-            case .Effect:
-                cell.pulse()
-                soundEffectPlayer.playSound(item.sound)
-            case .BackgroundLoop:
-                item.playing = soundBackgroundLoopPlayer.loopSound(item.sound)
-                //collectionView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Left)
-                collectionView.reloadItemsAtIndexPaths([indexPath])
-            }
-            
-            
-            
-        default:
-            println("Unknown item")
+            case let item as PowerSuitSoundItem:
+                
+                switch item.type {
+                    case .Voice:
+                        cell.pulse()
+                        soundVoicePlayer.queueSound(item.sound)
+                    case .Effect:
+                        cell.pulse()
+                        soundEffectPlayer.playSound(item.sound)
+                    case .BackgroundLoop:
+                        item.playing = soundBackgroundLoopPlayer.loopSound(item.sound)
+                        //collectionView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Left)
+                        collectionView.reloadItemsAtIndexPaths([indexPath])
+                }
+                
+            default:
+                println("Unknown item")
         }
-        
-        
-        
         
         collectionView.deselectItemAtIndexPath(indexPath, animated: false)
     }
-    
 }

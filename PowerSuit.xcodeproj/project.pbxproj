@@ -20,6 +20,7 @@
 		4C6B0A1119878D1B00A99A2E /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6B0A1019878D1B00A99A2E /* SoundPlayer.swift */; };
 		4C70F8461987A0E400DF598B /* transformers.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4C70F8451987A0E400DF598B /* transformers.wav */; };
 		4C70F8491987A1B600DF598B /* robot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4C70F8481987A1B600DF598B /* robot.wav */; };
+		4CB749F919894B390066620C /* bluefade_pixel.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4CB749F819894B370066620C /* bluefade_pixel.mp4 */; };
 		4CB7837F1987C92600E622A0 /* beat.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4CB7837E1987C92600E622A0 /* beat.aiff */; };
 		4CB783821987CDAE00E622A0 /* beep.aif in Resources */ = {isa = PBXBuildFile; fileRef = 4CB783801987CDAE00E622A0 /* beep.aif */; };
 		4CB783831987CDAE00E622A0 /* radioscatter.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4CB783811987CDAE00E622A0 /* radioscatter.wav */; };
@@ -49,7 +50,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4C3AE585198924A100B3DDBE /* bgvideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = bgvideo.mp4; sourceTree = "<group>"; };
 		4C6B09DD198785F400A99A2E /* PowerSuit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PowerSuit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C6B09E1198785F400A99A2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C6B09E2198785F400A99A2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +67,7 @@
 		4C6B0A1019878D1B00A99A2E /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		4C70F8451987A0E400DF598B /* transformers.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = transformers.wav; sourceTree = "<group>"; };
 		4C70F8481987A1B600DF598B /* robot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = robot.wav; sourceTree = "<group>"; };
+		4CB749F819894B370066620C /* bluefade_pixel.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = bluefade_pixel.mp4; sourceTree = "<group>"; };
 		4CB7837E1987C92600E622A0 /* beat.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = beat.aiff; sourceTree = "<group>"; };
 		4CB783801987CDAE00E622A0 /* beep.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = beep.aif; sourceTree = "<group>"; };
 		4CB783811987CDAE00E622A0 /* radioscatter.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = radioscatter.wav; sourceTree = "<group>"; };
@@ -135,7 +136,7 @@
 				4CDEFAEE1987EEC50045EE25 /* PowerSuitCell.swift */,
 				4CDEFAF4198817180045EE25 /* PowerSuitHeader.swift */,
 				4CDEFAF2198809870045EE25 /* CellBackgroundView.swift */,
-				4C3AE585198924A100B3DDBE /* bgvideo.mp4 */,
+				4CB749F819894B370066620C /* bluefade_pixel.mp4 */,
 			);
 			path = PowerSuit;
 			sourceTree = "<group>";
@@ -301,6 +302,7 @@
 				4CB7837F1987C92600E622A0 /* beat.aiff in Resources */,
 				4C6B09E8198785F400A99A2E /* Main.storyboard in Resources */,
 				4CB783951987D03F00E622A0 /* right_wing_up.aiff in Resources */,
+				4CB749F919894B390066620C /* bluefade_pixel.mp4 in Resources */,
 				4CB783881987CF3F00E622A0 /* swoosh.wav in Resources */,
 				4C70F8461987A0E400DF598B /* transformers.wav in Resources */,
 				4C70F8491987A1B600DF598B /* robot.wav in Resources */,
