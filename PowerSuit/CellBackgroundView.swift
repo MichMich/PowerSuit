@@ -28,6 +28,12 @@ class CellBackgroundView: UIView {
         }
     }
     
+    var saturation:Float = 1.0 {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    
     var active:Bool = true{
         didSet {
             setNeedsDisplay()
@@ -61,13 +67,13 @@ class CellBackgroundView: UIView {
         path.addLineToPoint(CGPoint(x: 0, y: 0))
         
         
-        UIColor(hue: CGFloat(hue), saturation: 1, brightness: 1, alpha: 1).setStroke()
+        UIColor(hue: CGFloat(hue), saturation: CGFloat(saturation), brightness: 1, alpha: 1).setStroke()
         path.stroke()
         
         if (active) {
-            UIColor(hue: CGFloat(hue), saturation: 1, brightness: 1, alpha: 0.5).setFill()
+            UIColor(hue: CGFloat(hue), saturation: CGFloat(saturation), brightness: 1, alpha: 0.5).setFill()
         } else {
-            UIColor(hue: CGFloat(hue), saturation: 1, brightness: 1, alpha: 0.1).setFill()
+            UIColor(hue: CGFloat(hue), saturation: CGFloat(saturation), brightness: 1, alpha: 0.1).setFill()
         }
         
         path.fill()

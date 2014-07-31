@@ -16,6 +16,10 @@ class SoundPlayer: NSObject, AVAudioPlayerDelegate {
     var queuedSounds:[String] = []
     var playing = false
     
+    
+    var randomTimer:NSTimer?
+    var randomPlaylist:[String]?
+    
     var loopPlayers = [String:AVAudioPlayer]()
     
     class var sharedInstance : SoundPlayer {
@@ -29,6 +33,27 @@ class SoundPlayer: NSObject, AVAudioPlayerDelegate {
         
     }
     
+    func startRandomPlaylist(randomPlaylist:[String]?, withInterval interval:NSTimeInterval) {
+        if let playlist = randomPlaylist {
+            self.randomPlaylist = randomPlaylist
+            randomTimer = NSTimer.scheduledTimerWithTimeInterval(interval, target: self, selector: "queueRandomSound", userInfo: nil, repeats: true)
+            queueRandomSound()
+        } else {
+            randomTimer?.invalidate()
+            randomTimer = nil
+        }
+    }
+    
+    func queueRandomSound()
+    {
+
+
+        if let playlist = randomPlaylist {
+            let randomIndex = arc4random_uniform(UInt32(playlist.count))
+            let soundName = playlist[Int(randomIndex)]
+            queueSound(soundName)
+        }
+    }
 
     func playSound(sound:String) {
         if let audioPlayer = createPlayer(sound) {
@@ -68,6 +93,7 @@ class SoundPlayer: NSObject, AVAudioPlayerDelegate {
     }
     
     func queueSound(sound:String) {
+        println("Queue sound: \(sound)")
         queuedSounds.append(sound)
         
         if !playing {
@@ -90,9 +116,10 @@ class SoundPlayer: NSObject, AVAudioPlayerDelegate {
         if queuedSounds.count > 0 {
             let sound = queuedSounds[0]
             audioPlayer = createPlayer(sound)
-            playing = true
-            audioPlayer.play()
-            
+            if audioPlayer {
+                playing = true
+                audioPlayer.play()
+            }
             queuedSounds.removeAtIndex(0)
         }
     }

@@ -30,6 +30,8 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     
 }
 
+
+
 // MARK: - Subclassed functions
 extension CollectionViewController {
     override func viewDidLoad() {
@@ -66,6 +68,16 @@ extension CollectionViewController {
                 PowerSuitSoundItem(title: "Radioscatter", hue:0.4, sound: "radioscatter.wav", type:SoundType.BackgroundLoop)
             ]),
             Section(name: "Voices", items: [
+                PowerSuitActionItem(title: "Randomize Effects", hue:1, saturation:0, action: {
+                    (sectionItem:PowerSuitActionItem)->() in
+                    
+                    sectionItem.active = !sectionItem.active
+                    if (sectionItem.active) {
+                        self.soundVoicePlayer.startRandomPlaylist(["left_wing_up.aiff","left_wing_down.aiff","right_wing_up.aiff","right_wing_down.aiff","both_wings_up.aiff","both_wings_down.aiff"], withInterval: 10)
+                    } else {
+                        self.soundVoicePlayer.startRandomPlaylist(nil, withInterval: 0)
+                    }
+                }),
                 PowerSuitSoundItem(title: "Description", hue:0.45, sound: "description.wav", type:SoundType.Voice),
                 PowerSuitSoundItem(title: "Left wing up", hue:0.45, sound: "left_wing_up.aiff", type:SoundType.Voice),
                 PowerSuitSoundItem(title: "Left wing down", hue:0.45, sound: "left_wing_down.aiff", type:SoundType.Voice),
@@ -75,6 +87,16 @@ extension CollectionViewController {
                 PowerSuitSoundItem(title: "Both wings down", hue:0.45, sound: "both_wings_down.aiff", type:SoundType.Voice),
             ]),
             Section(name: "Effects", items: [
+                PowerSuitActionItem(title: "Randomize Effects", hue:1, saturation:0, action: {
+                        (sectionItem:PowerSuitActionItem)->() in
+                    
+                        sectionItem.active = !sectionItem.active
+                        if (sectionItem.active) {
+                            self.soundEffectPlayer.startRandomPlaylist(["transformers.wav","robot.wav","swoosh.wav","ufo.wav"], withInterval: 5)
+                        } else {
+                            self.soundEffectPlayer.startRandomPlaylist(nil, withInterval: 0)
+                        }
+                }),
                 PowerSuitSoundItem(title: "Transformers", hue:0.5, sound: "transformers.wav", type:SoundType.Effect),
                 PowerSuitSoundItem(title: "Robot", hue:0.5, sound: "robot.wav", type:SoundType.Effect),
                 PowerSuitSoundItem(title: "Swoosh", hue:0.5, sound: "swoosh.wav", type:SoundType.Effect),
@@ -82,10 +104,14 @@ extension CollectionViewController {
             ]),
             Section(name: "Actions", items: [
                 PowerSuitActionItem(title: "Clear Sound Queue", hue:1, action: {
+                    
+                    (sectionItem:PowerSuitActionItem)->() in
                     self.soundVoicePlayer.clearQueue()
                     
                 }),
                 PowerSuitActionItem(title: "Stop All Sounds", hue:1, action: {
+                    
+                    (sectionItem:PowerSuitActionItem)->() in
                     self.soundVoicePlayer.clearQueue()
                     
                     self.soundVoicePlayer.stop()
@@ -140,6 +166,8 @@ extension CollectionViewController {
         let rowItem = sections[indexPath.section].items[indexPath.row]
         cell.mainLabel.text = rowItem.title
         cell.hue = rowItem.hue
+        cell.saturation = rowItem.saturation
+        cell.active = rowItem.active
         
         switch sections[indexPath.section].items[indexPath.row] {
             
@@ -203,8 +231,13 @@ extension CollectionViewController {
         
         switch sections[indexPath.section].items[indexPath.row] {
             case let item as PowerSuitActionItem:
-                item.action()
-                cell.pulse()
+                item.action(sectionItem: item)
+                if (item.active) {
+                    cell.active = item.active
+                } else {
+                    cell.active = item.active
+                    cell.pulse()
+                }
             case let item as PowerSuitSoundItem:
                 
                 switch item.type {
@@ -227,3 +260,8 @@ extension CollectionViewController {
         collectionView.deselectItemAtIndexPath(indexPath, animated: false)
     }
 }
+
+
+
+
+

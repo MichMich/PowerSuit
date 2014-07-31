@@ -13,7 +13,14 @@ class PowerSuitCell: UICollectionViewCell {
     let cornerSize:CGFloat = 15
     let mainLabel = UILabel()
     let bgView = CellBackgroundView()
+    
     var hue:Float = 1.0 {
+        didSet {
+            updateUI()
+        }
+    }
+    
+    var saturation:Float = 1.0 {
         didSet {
             updateUI()
         }
@@ -53,7 +60,7 @@ class PowerSuitCell: UICollectionViewCell {
     }
     func unpulse()
     {
-        UIView.transitionWithView(bgView, duration: 1, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: {
+        UIView.transitionWithView(bgView, duration: 0.5, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: {
             self.bgView.active = false
         }, completion: nil)
     }
@@ -92,8 +99,9 @@ class PowerSuitCell: UICollectionViewCell {
     
     func updateUI()
     {
-        mainLabel.textColor = UIColor(hue: CGFloat(hue), saturation: 1, brightness: 1, alpha: 1)
+        mainLabel.textColor = UIColor(hue: CGFloat(hue), saturation: CGFloat(saturation), brightness: 1, alpha: 1)
         bgView.hue = hue
+        bgView.saturation = saturation
         bgView.active = active
     }
 

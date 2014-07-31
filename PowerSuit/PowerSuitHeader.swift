@@ -41,7 +41,7 @@ class PowerSuitHeader: UICollectionReusableView {
           
         bgView.hue = 0.20
         bgView.active = false
-        mainLabel.textColor = UIColor(hue: CGFloat(bgView.hue), saturation: 1, brightness: 1, alpha: 1)
+        mainLabel.textColor = UIColor(hue: CGFloat(bgView.hue), saturation: CGFloat(bgView.saturation), brightness: 1, alpha: 1)
         mainLabel.font = UIFont(name: "DINCondensed-Bold", size: 16)
         mainLabel.textAlignment = .Left
         mainLabel.numberOfLines = 0
