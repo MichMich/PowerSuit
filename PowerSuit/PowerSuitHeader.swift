@@ -37,7 +37,7 @@ class PowerSuitHeader: UICollectionReusableView {
         self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options: nil, metrics: nil, views: ["view":bgView]))
         
         self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-10-[view]|", options: nil, metrics: nil, views: ["view":mainLabel]))
-        self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-3-[view]|", options: nil, metrics: nil, views: ["view":mainLabel]))
+        self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-4-[view]|", options: nil, metrics: nil, views: ["view":mainLabel]))
           
         bgView.hue = 0.20
         bgView.active = false

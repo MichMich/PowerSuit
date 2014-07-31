@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C4A7787198A685B00877F89 /* 8bit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4C4A7784198A685B00877F89 /* 8bit.wav */; };
+		4C4A7788198A685B00877F89 /* cancel.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4C4A7785198A685B00877F89 /* cancel.wav */; };
+		4C4A7789198A685B00877F89 /* teleport.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4C4A7786198A685B00877F89 /* teleport.wav */; };
+		4C4A778D198A686100877F89 /* voice_connected.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4C4A778A198A686100877F89 /* voice_connected.wav */; };
+		4C4A778E198A686100877F89 /* voice_disconnected.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4C4A778B198A686100877F89 /* voice_disconnected.wav */; };
+		4C4A778F198A686100877F89 /* voice_welcome_future.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4C4A778C198A686100877F89 /* voice_welcome_future.wav */; };
 		4C6B09E3198785F400A99A2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6B09E2198785F400A99A2E /* AppDelegate.swift */; };
 		4C6B09E8198785F400A99A2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C6B09E6198785F400A99A2E /* Main.storyboard */; };
 		4C6B09EA198785F400A99A2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C6B09E9198785F400A99A2E /* Images.xcassets */; };
@@ -50,6 +56,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C4A7784198A685B00877F89 /* 8bit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 8bit.wav; sourceTree = "<group>"; };
+		4C4A7785198A685B00877F89 /* cancel.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cancel.wav; sourceTree = "<group>"; };
+		4C4A7786198A685B00877F89 /* teleport.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = teleport.wav; sourceTree = "<group>"; };
+		4C4A778A198A686100877F89 /* voice_connected.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_connected.wav; sourceTree = "<group>"; };
+		4C4A778B198A686100877F89 /* voice_disconnected.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_disconnected.wav; sourceTree = "<group>"; };
+		4C4A778C198A686100877F89 /* voice_welcome_future.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_welcome_future.wav; sourceTree = "<group>"; };
 		4C6B09DD198785F400A99A2E /* PowerSuit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PowerSuit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C6B09E1198785F400A99A2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C6B09E2198785F400A99A2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +191,9 @@
 		4C70F8441987A0E400DF598B /* effects */ = {
 			isa = PBXGroup;
 			children = (
+				4C4A7784198A685B00877F89 /* 8bit.wav */,
+				4C4A7785198A685B00877F89 /* cancel.wav */,
+				4C4A7786198A685B00877F89 /* teleport.wav */,
 				4CB783851987CF3F00E622A0 /* swoosh.wav */,
 				4CB783861987CF3F00E622A0 /* ufo.wav */,
 				4C70F8481987A1B600DF598B /* robot.wav */,
@@ -190,6 +205,9 @@
 		4C70F8471987A0E800DF598B /* voice */ = {
 			isa = PBXGroup;
 			children = (
+				4C4A778A198A686100877F89 /* voice_connected.wav */,
+				4C4A778B198A686100877F89 /* voice_disconnected.wav */,
+				4C4A778C198A686100877F89 /* voice_welcome_future.wav */,
 				4CB783961987DCD400E622A0 /* description.wav */,
 				4CB7838A1987D03F00E622A0 /* both_wings_down.aiff */,
 				4CB7838B1987D03F00E622A0 /* both_wings_up.aiff */,
@@ -301,6 +319,7 @@
 				4CB783941987D03F00E622A0 /* right_wing_down.aiff in Resources */,
 				4CB7837F1987C92600E622A0 /* beat.aiff in Resources */,
 				4C6B09E8198785F400A99A2E /* Main.storyboard in Resources */,
+				4C4A7788198A685B00877F89 /* cancel.wav in Resources */,
 				4CB783951987D03F00E622A0 /* right_wing_up.aiff in Resources */,
 				4CB749F919894B390066620C /* bluefade_pixel.mp4 in Resources */,
 				4CB783881987CF3F00E622A0 /* swoosh.wav in Resources */,
@@ -309,16 +328,21 @@
 				4CB783921987D03F00E622A0 /* left_wing_down.aiff in Resources */,
 				4CB783891987CF3F00E622A0 /* ufo.wav in Resources */,
 				4CB783931987D03F00E622A0 /* left_wing_up.aiff in Resources */,
+				4C4A7789198A685B00877F89 /* teleport.wav in Resources */,
+				4C4A778E198A686100877F89 /* voice_disconnected.wav in Resources */,
 				4C6B0A0F19878CE400A99A2E /* sound1.aiff in Resources */,
 				4C6B0A0E19878CE400A99A2E /* sound2.aiff in Resources */,
+				4C4A7787198A685B00877F89 /* 8bit.wav in Resources */,
 				4CB783971987DCD400E622A0 /* description.wav in Resources */,
 				4C6B09EA198785F400A99A2E /* Images.xcassets in Resources */,
 				4CB783821987CDAE00E622A0 /* beep.aif in Resources */,
 				4CB783831987CDAE00E622A0 /* radioscatter.wav in Resources */,
 				4CB783901987D03F00E622A0 /* both_wings_down.aiff in Resources */,
+				4C4A778F198A686100877F89 /* voice_welcome_future.wav in Resources */,
 				4C6B0A0B19878CE400A99A2E /* sound4.aiff in Resources */,
 				4CB783911987D03F00E622A0 /* both_wings_up.aiff in Resources */,
 				4C6B0A0C19878CE400A99A2E /* sound3.aiff in Resources */,
+				4C4A778D198A686100877F89 /* voice_connected.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

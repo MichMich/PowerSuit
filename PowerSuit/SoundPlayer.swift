@@ -17,6 +17,9 @@ class SoundPlayer: NSObject, AVAudioPlayerDelegate {
     var playing = false
     
     
+    var randomMinInterval:NSTimeInterval = 0
+    var randomMaxInterval:NSTimeInterval = 0
+
     var randomTimer:NSTimer?
     var randomPlaylist:[String]?
     
@@ -33,15 +36,19 @@ class SoundPlayer: NSObject, AVAudioPlayerDelegate {
         
     }
     
-    func startRandomPlaylist(randomPlaylist:[String]?, withInterval interval:NSTimeInterval) {
+    func startRandomPlaylist(randomPlaylist:[String]?, withMinimumInterval minInterval:NSTimeInterval, maximumInterval maxInterval:NSTimeInterval) {
+        randomMinInterval = minInterval
+        randomMaxInterval = maxInterval
         if let playlist = randomPlaylist {
             self.randomPlaylist = randomPlaylist
-            randomTimer = NSTimer.scheduledTimerWithTimeInterval(interval, target: self, selector: "queueRandomSound", userInfo: nil, repeats: true)
             queueRandomSound()
         } else {
-            randomTimer?.invalidate()
-            randomTimer = nil
+            stopRandomPlaylist()
         }
+    }
+    func stopRandomPlaylist() {
+        randomTimer?.invalidate()
+        randomTimer = nil
     }
     
     func queueRandomSound()
@@ -52,6 +59,10 @@ class SoundPlayer: NSObject, AVAudioPlayerDelegate {
             let randomIndex = arc4random_uniform(UInt32(playlist.count))
             let soundName = playlist[Int(randomIndex)]
             queueSound(soundName)
+            
+            let randomInterval = randomMinInterval + NSTimeInterval(arc4random_uniform(UInt32(randomMaxInterval - randomMinInterval)))
+            //println("Scheduled random sound in: \(randomInterval) seconds")
+            randomTimer = NSTimer.scheduledTimerWithTimeInterval(randomInterval, target: self, selector: "queueRandomSound", userInfo: nil, repeats: false)
         }
     }
 
@@ -153,7 +164,7 @@ class SoundPlayer: NSObject, AVAudioPlayerDelegate {
     {
         playing = false
         
-        audioPlayers = audioPlayers.filter( {$0 != player})
+        audioPlayers = audioPlayers.filter {$0 != player}
         
         playQueue()
     }

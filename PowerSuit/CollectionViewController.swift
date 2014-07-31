@@ -73,11 +73,23 @@ extension CollectionViewController {
                     
                     sectionItem.active = !sectionItem.active
                     if (sectionItem.active) {
-                        self.soundVoicePlayer.startRandomPlaylist(["left_wing_up.aiff","left_wing_down.aiff","right_wing_up.aiff","right_wing_down.aiff","both_wings_up.aiff","both_wings_down.aiff"], withInterval: 10)
+                        self.soundVoicePlayer.startRandomPlaylist([
+                            "voice_welcome_future.wav",
+                            "left_wing_up.aiff",
+                            "left_wing_down.aiff",
+                            "right_wing_up.aiff",
+                            "right_wing_down.aiff",
+                            "both_wings_up.aiff",
+                            "both_wings_down.aiff"
+                        ], withMinimumInterval: 10, maximumInterval:20)
                     } else {
-                        self.soundVoicePlayer.startRandomPlaylist(nil, withInterval: 0)
+                        self.soundVoicePlayer.stopRandomPlaylist()
                     }
                 }),
+                PowerSuitSoundItem(title: "Description", hue:0.45, sound: "description.wav", type:SoundType.Voice),
+                PowerSuitSoundItem(title: "Future", hue:0.45, sound: "voice_welcome_future.wav", type:SoundType.Voice),
+                PowerSuitSoundItem(title: "Connected", hue:0.45, sound: "voice_connected.wav", type:SoundType.Voice),
+                PowerSuitSoundItem(title: "Disconnected", hue:0.45, sound: "voice_disconnected.wav", type:SoundType.Voice),
                 PowerSuitSoundItem(title: "Description", hue:0.45, sound: "description.wav", type:SoundType.Voice),
                 PowerSuitSoundItem(title: "Left wing up", hue:0.45, sound: "left_wing_up.aiff", type:SoundType.Voice),
                 PowerSuitSoundItem(title: "Left wing down", hue:0.45, sound: "left_wing_down.aiff", type:SoundType.Voice),
@@ -92,11 +104,23 @@ extension CollectionViewController {
                     
                         sectionItem.active = !sectionItem.active
                         if (sectionItem.active) {
-                            self.soundEffectPlayer.startRandomPlaylist(["transformers.wav","robot.wav","swoosh.wav","ufo.wav"], withInterval: 5)
+                            self.soundEffectPlayer.startRandomPlaylist([
+                                "8bit.wav",
+                                "cancel.wav",
+                                "teleport.wav",
+                                "transformers.wav",
+                                "robot.wav",
+                                "swoosh.wav",
+                                "ufo.wav",
+                                
+                            ], withMinimumInterval: 5, maximumInterval:10)
                         } else {
-                            self.soundEffectPlayer.startRandomPlaylist(nil, withInterval: 0)
+                            self.soundEffectPlayer.stopRandomPlaylist()
                         }
                 }),
+                PowerSuitSoundItem(title: "8bit", hue:0.5, sound: "8bit.wav", type:SoundType.Effect),
+                PowerSuitSoundItem(title: "Cancel", hue:0.5, sound: "cancel.wav", type:SoundType.Effect),
+                PowerSuitSoundItem(title: "Teleport", hue:0.5, sound: "teleport.wav", type:SoundType.Effect),
                 PowerSuitSoundItem(title: "Transformers", hue:0.5, sound: "transformers.wav", type:SoundType.Effect),
                 PowerSuitSoundItem(title: "Robot", hue:0.5, sound: "robot.wav", type:SoundType.Effect),
                 PowerSuitSoundItem(title: "Swoosh", hue:0.5, sound: "swoosh.wav", type:SoundType.Effect),
@@ -215,7 +239,7 @@ extension CollectionViewController {
 
     func collectionView(collectionView: UICollectionView!, layout collectionViewLayout: UICollectionViewLayout!, referenceSizeForHeaderInSection section: Int) -> CGSize
     {
-        return CGSize(width: view.bounds.size.width, height: 40)
+        return CGSize(width: view.bounds.size.width, height: 30)
     }
     
     
