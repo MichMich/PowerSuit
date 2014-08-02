@@ -75,6 +75,8 @@ extension CollectionViewController {
                     if (sectionItem.active) {
                         self.soundVoicePlayer.startRandomPlaylist([
                             "voice_welcome_future.wav",
+                            "voice_connected.wav",
+                            "voice_disconnected.wav",
                             "left_wing_up.aiff",
                             "left_wing_down.aiff",
                             "right_wing_up.aiff",
@@ -90,7 +92,6 @@ extension CollectionViewController {
                 PowerSuitSoundItem(title: "Future", hue:0.45, sound: "voice_welcome_future.wav", type:SoundType.Voice),
                 PowerSuitSoundItem(title: "Connected", hue:0.45, sound: "voice_connected.wav", type:SoundType.Voice),
                 PowerSuitSoundItem(title: "Disconnected", hue:0.45, sound: "voice_disconnected.wav", type:SoundType.Voice),
-                PowerSuitSoundItem(title: "Description", hue:0.45, sound: "description.wav", type:SoundType.Voice),
                 PowerSuitSoundItem(title: "Left wing up", hue:0.45, sound: "left_wing_up.aiff", type:SoundType.Voice),
                 PowerSuitSoundItem(title: "Left wing down", hue:0.45, sound: "left_wing_down.aiff", type:SoundType.Voice),
                 PowerSuitSoundItem(title: "Right wing up", hue:0.45, sound: "right_wing_up.aiff", type:SoundType.Voice),
