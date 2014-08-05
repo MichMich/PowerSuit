@@ -32,7 +32,7 @@ class SoundPlayer: NSObject, AVAudioPlayerDelegate {
         return Static.instance
     }
     
-    init () {
+    override init () {
         
     }
     
@@ -148,7 +148,7 @@ class SoundPlayer: NSObject, AVAudioPlayerDelegate {
         
         let soundData = NSData(contentsOfURL: soundURL(sound))
         let audioPlayer = AVAudioPlayer(data: soundData, error: &error)
-        if error {
+        if error != nil {
             println("There was an error opening the file: \(error)")
         } else {
             audioPlayer.delegate = self

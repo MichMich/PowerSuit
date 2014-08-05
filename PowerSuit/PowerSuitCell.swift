@@ -12,7 +12,7 @@ class PowerSuitCell: UICollectionViewCell {
     
     let cornerSize:CGFloat = 15
     let mainLabel = UILabel()
-    let bgView = CellBackgroundView()
+    let bgView = CellBackgroundView(frame: CGRectZero)
     
     var hue:Float = 1.0 {
         didSet {
@@ -32,13 +32,13 @@ class PowerSuitCell: UICollectionViewCell {
         }
     }
     
-    init(coder aDecoder: NSCoder!)
+    required init(coder aDecoder: NSCoder!)
     {
         super.init(coder: aDecoder)
         setup()
     }
     
-    init(frame: CGRect)
+    override init(frame: CGRect)
     {
         super.init(frame: frame)
         setup()

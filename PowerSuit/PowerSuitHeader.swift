@@ -10,15 +10,15 @@ import UIKit
 
 class PowerSuitHeader: UICollectionReusableView {
     let mainLabel = UILabel()
-    let bgView = CellBackgroundView()
+    let bgView = CellBackgroundView(frame:CGRectZero)
     
-    init(coder aDecoder: NSCoder!)
+    required init(coder aDecoder: NSCoder!)
     {
         super.init(coder: aDecoder)
         setup()
     }
     
-    init(frame: CGRect)
+    override init(frame: CGRect)
     {
         super.init(frame: frame)
         setup()
