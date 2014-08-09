@@ -28,12 +28,18 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     var sectionNames:[String] = []
     var sections:[Section] = []
     
+    var nrfManager: NRFManager!
+    
+    let feedbackTextViewHeight = 150.0
+    var feedbackView = FeedbackView(frame: CGRectZero)
+    var feedbackTextView = FeedbackTextView(frame: CGRectZero)
+    
 }
 
 
 
 // MARK: - Subclassed functions
-extension CollectionViewController {
+extension CollectionViewController:NRFManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,14 +57,23 @@ extension CollectionViewController {
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options: nil, metrics: nil, views: ["view":moviePlayerController.view]))
         view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options: nil, metrics: nil, views: ["view":moviePlayerController.view]))
 
+        
+        view.addSubview(feedbackView)
+        feedbackView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        
+        feedbackView.backgroundColor = UIColor(white: 0, alpha: 0.75)
+        
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options: nil, metrics: nil, views: ["view":feedbackView]))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:[view(height)]|", options: nil, metrics: ["height":feedbackTextViewHeight], views: ["view":feedbackView]))
 
         
+        feedbackView.addSubview(feedbackTextView)
         
         collectionView.registerClass(PowerSuitCell.self, forCellWithReuseIdentifier: CellIdentifier)
         collectionView.registerClass(PowerSuitHeader.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: HeaderIdentifier)
         
-        
-        collectionView.contentInset = UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 20)
+
+        collectionView.contentInset = UIEdgeInsets(top: 20, left: 20, bottom: CGFloat(10 + feedbackTextViewHeight), right: 20)
         
         
         sections = [
@@ -74,15 +89,7 @@ extension CollectionViewController {
                     sectionItem.active = !sectionItem.active
                     if (sectionItem.active) {
                         self.soundVoicePlayer.startRandomPlaylist([
-                            "voice_welcome_future.wav",
-                            "voice_connected.wav",
-                            "voice_disconnected.wav",
-                            "left_wing_up.aiff",
-                            "left_wing_down.aiff",
-                            "right_wing_up.aiff",
-                            "right_wing_down.aiff",
-                            "both_wings_up.aiff",
-                            "both_wings_down.aiff"
+                            "voice_welcome_future.wav"
                         ], withMinimumInterval: 10, maximumInterval:20)
                     } else {
                         self.soundVoicePlayer.stopRandomPlaylist()
@@ -90,14 +97,6 @@ extension CollectionViewController {
                 }),
                 PowerSuitSoundItem(title: "Description", hue:0.45, sound: "description.wav", type:SoundType.Voice),
                 PowerSuitSoundItem(title: "Future", hue:0.45, sound: "voice_welcome_future.wav", type:SoundType.Voice),
-                PowerSuitSoundItem(title: "Connected", hue:0.45, sound: "voice_connected.wav", type:SoundType.Voice),
-                PowerSuitSoundItem(title: "Disconnected", hue:0.45, sound: "voice_disconnected.wav", type:SoundType.Voice),
-                PowerSuitSoundItem(title: "Left wing up", hue:0.45, sound: "left_wing_up.aiff", type:SoundType.Voice),
-                PowerSuitSoundItem(title: "Left wing down", hue:0.45, sound: "left_wing_down.aiff", type:SoundType.Voice),
-                PowerSuitSoundItem(title: "Right wing up", hue:0.45, sound: "right_wing_up.aiff", type:SoundType.Voice),
-                PowerSuitSoundItem(title: "Right wing down", hue:0.45, sound: "right_wing_down.aiff", type:SoundType.Voice),
-                PowerSuitSoundItem(title: "Both wings up", hue:0.45, sound: "both_wings_up.aiff", type:SoundType.Voice),
-                PowerSuitSoundItem(title: "Both wings down", hue:0.45, sound: "both_wings_down.aiff", type:SoundType.Voice),
             ]),
             Section(name: "Effects", items: [
                 PowerSuitActionItem(title: "Randomize Effects", hue:1, saturation:0, action: {
@@ -146,11 +145,21 @@ extension CollectionViewController {
             ]),
         ]
 
+        
+        nrfManager = NRFManager(delegate:self);
+        nrfManager.verbose = true;
+        
+        
     }
     
     override func viewDidAppear(animated: Bool)
     {
         moviePlayerController.play()
+        feedbackTextView.addMessage("PowerSuit Operating System Loaded!", color: UIColor.yellowColor())
+        
+
+        
+        println(feedbackTextView.frame)
     }
     
     override func viewDidDisappear(animated: Bool)
@@ -163,6 +172,14 @@ extension CollectionViewController {
         return true
     }
     
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        feedbackTextView.frame = CGRectInset(feedbackView.bounds, 15, 5)
+        
+    }
+    
+ 
     
 }
 
@@ -269,9 +286,13 @@ extension CollectionViewController {
                     case .Voice:
                         cell.pulse()
                         soundVoicePlayer.queueSound(item.sound)
+                        feedbackTextView.addMessage("Sound queued: \(item.title)")
+
                     case .Effect:
                         cell.pulse()
                         soundEffectPlayer.playSound(item.sound)
+                        feedbackTextView.addMessage("Effect played: \(item.title)")
+
                     case .BackgroundLoop:
                         item.playing = soundBackgroundLoopPlayer.loopSound(item.sound)
                         //collectionView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Left)
@@ -286,7 +307,43 @@ extension CollectionViewController {
     }
 }
 
+// MARK: - NRFManagerDelegate Methods
+extension CollectionViewController {
+    
+    func nrfDidConnect(nrfManager:NRFManager)
+    {
+        println("PowerSuit Connected")
+        self.soundVoicePlayer.queueSound("voice_connected.wav")
+        feedbackTextView.addMessage("Connected", color: UIColor.greenColor())
+    }
+    
+    func nrfDidDisconnect(nrfManager:NRFManager)
+    {
+        println("PowerSuit Disconnected")
+        self.soundVoicePlayer.queueSound("voice_disconnected.wav")
+        feedbackTextView.addMessage("Disconnected", color: UIColor.redColor())
 
+    }
+    
+    func nrfReceivedData(nrfManager:NRFManager, data:NSData, string:String)
+    {
+        switch string {
+            case "WING_ENABLE":
+                self.soundVoicePlayer.queueSound("voice_wings_enabled.wav")
+                feedbackTextView.addMessage("Wings Enabled", color: UIColor.yellowColor())
 
+            case "WING_DISABLE":
+                self.soundVoicePlayer.queueSound("voice_wings_disabled.wav")
+                feedbackTextView.addMessage("Wings Disabled", color: UIColor.yellowColor())
+
+        default:
+            // FIXME: should get own info string
+            self.soundVoicePlayer.queueSound("voice_light_adjusted.wav")
+            println("PowerSuit Data: \(string)")
+            feedbackTextView.addMessage(string, color: UIColor.yellowColor())
+        }
+        
+    }
+}
 
 

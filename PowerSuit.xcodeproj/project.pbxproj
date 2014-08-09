@@ -43,6 +43,14 @@
 		4CDEFAF11987EEF20045EE25 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEFAF01987EEF20045EE25 /* CollectionViewController.swift */; };
 		4CDEFAF3198809870045EE25 /* CellBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEFAF2198809870045EE25 /* CellBackgroundView.swift */; };
 		4CDEFAF5198817180045EE25 /* PowerSuitHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEFAF4198817180045EE25 /* PowerSuitHeader.swift */; };
+		4CE2B0C719967E7200FB99C3 /* NRFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE2B0C619967E7200FB99C3 /* NRFManager.swift */; };
+		4CE2B0CA1996816200FB99C3 /* voice_wings_disabled.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4CE2B0C81996816200FB99C3 /* voice_wings_disabled.wav */; };
+		4CE2B0CB1996816200FB99C3 /* voice_wings_enabled.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4CE2B0C91996816200FB99C3 /* voice_wings_enabled.wav */; };
+		4CE2B0CD199685FB00FB99C3 /* FeedbackTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE2B0CC199685FB00FB99C3 /* FeedbackTextView.swift */; };
+		4CE2B0CF1996A8EF00FB99C3 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE2B0CE1996A8EF00FB99C3 /* FeedbackView.swift */; };
+		4CE2B0D11996B1DE00FB99C3 /* voice_light_mode_updated.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4CE2B0D01996B1DE00FB99C3 /* voice_light_mode_updated.wav */; };
+		4CE2B0D81996B35800FB99C3 /* voice_color_adjusted.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4CE2B0D61996B35800FB99C3 /* voice_color_adjusted.wav */; };
+		4CE2B0D91996B35800FB99C3 /* voice_light_adjusted.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4CE2B0D71996B35800FB99C3 /* voice_light_adjusted.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +104,14 @@
 		4CDEFAF01987EEF20045EE25 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		4CDEFAF2198809870045EE25 /* CellBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellBackgroundView.swift; sourceTree = "<group>"; };
 		4CDEFAF4198817180045EE25 /* PowerSuitHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerSuitHeader.swift; sourceTree = "<group>"; };
+		4CE2B0C619967E7200FB99C3 /* NRFManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NRFManager.swift; path = "../../../OpenSourced/nRF8001-Swift/nRF8001-Swift/NRFManager.swift"; sourceTree = "<group>"; };
+		4CE2B0C81996816200FB99C3 /* voice_wings_disabled.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_wings_disabled.wav; sourceTree = "<group>"; };
+		4CE2B0C91996816200FB99C3 /* voice_wings_enabled.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_wings_enabled.wav; sourceTree = "<group>"; };
+		4CE2B0CC199685FB00FB99C3 /* FeedbackTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackTextView.swift; sourceTree = "<group>"; };
+		4CE2B0CE1996A8EF00FB99C3 /* FeedbackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
+		4CE2B0D01996B1DE00FB99C3 /* voice_light_mode_updated.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_light_mode_updated.wav; sourceTree = "<group>"; };
+		4CE2B0D61996B35800FB99C3 /* voice_color_adjusted.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_color_adjusted.wav; sourceTree = "<group>"; };
+		4CE2B0D71996B35800FB99C3 /* voice_light_adjusted.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice_light_adjusted.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,11 +157,14 @@
 				4C6B09E2198785F400A99A2E /* AppDelegate.swift */,
 				4C6B0A1019878D1B00A99A2E /* SoundPlayer.swift */,
 				4CDEFAF01987EEF20045EE25 /* CollectionViewController.swift */,
+				4CE2B0CC199685FB00FB99C3 /* FeedbackTextView.swift */,
+				4CE2B0CE1996A8EF00FB99C3 /* FeedbackView.swift */,
 				4C6B0A03198786E900A99A2E /* PowerSuitItems.swift */,
 				4C6B09E6198785F400A99A2E /* Main.storyboard */,
 				4C6B09E9198785F400A99A2E /* Images.xcassets */,
 				4C6B09E0198785F400A99A2E /* Supporting Files */,
 				4CDEFAEE1987EEC50045EE25 /* PowerSuitCell.swift */,
+				4CE2B0C619967E7200FB99C3 /* NRFManager.swift */,
 				4CDEFAF4198817180045EE25 /* PowerSuitHeader.swift */,
 				4CDEFAF2198809870045EE25 /* CellBackgroundView.swift */,
 				4CB749F819894B370066620C /* bluefade_pixel.mp4 */,
@@ -205,6 +224,11 @@
 		4C70F8471987A0E800DF598B /* voice */ = {
 			isa = PBXGroup;
 			children = (
+				4CE2B0D61996B35800FB99C3 /* voice_color_adjusted.wav */,
+				4CE2B0D71996B35800FB99C3 /* voice_light_adjusted.wav */,
+				4CE2B0D01996B1DE00FB99C3 /* voice_light_mode_updated.wav */,
+				4CE2B0C81996816200FB99C3 /* voice_wings_disabled.wav */,
+				4CE2B0C91996816200FB99C3 /* voice_wings_enabled.wav */,
 				4C4A778A198A686100877F89 /* voice_connected.wav */,
 				4C4A778B198A686100877F89 /* voice_disconnected.wav */,
 				4C4A778C198A686100877F89 /* voice_welcome_future.wav */,
@@ -325,13 +349,18 @@
 				4CB783881987CF3F00E622A0 /* swoosh.wav in Resources */,
 				4C70F8461987A0E400DF598B /* transformers.wav in Resources */,
 				4C70F8491987A1B600DF598B /* robot.wav in Resources */,
+				4CE2B0CA1996816200FB99C3 /* voice_wings_disabled.wav in Resources */,
 				4CB783921987D03F00E622A0 /* left_wing_down.aiff in Resources */,
 				4CB783891987CF3F00E622A0 /* ufo.wav in Resources */,
+				4CE2B0D81996B35800FB99C3 /* voice_color_adjusted.wav in Resources */,
 				4CB783931987D03F00E622A0 /* left_wing_up.aiff in Resources */,
 				4C4A7789198A685B00877F89 /* teleport.wav in Resources */,
+				4CE2B0D91996B35800FB99C3 /* voice_light_adjusted.wav in Resources */,
 				4C4A778E198A686100877F89 /* voice_disconnected.wav in Resources */,
 				4C6B0A0F19878CE400A99A2E /* sound1.aiff in Resources */,
 				4C6B0A0E19878CE400A99A2E /* sound2.aiff in Resources */,
+				4CE2B0CB1996816200FB99C3 /* voice_wings_enabled.wav in Resources */,
+				4CE2B0D11996B1DE00FB99C3 /* voice_light_mode_updated.wav in Resources */,
 				4C4A7787198A685B00877F89 /* 8bit.wav in Resources */,
 				4CB783971987DCD400E622A0 /* description.wav in Resources */,
 				4C6B09EA198785F400A99A2E /* Images.xcassets in Resources */,
@@ -361,10 +390,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CDEFAF11987EEF20045EE25 /* CollectionViewController.swift in Sources */,
+				4CE2B0CF1996A8EF00FB99C3 /* FeedbackView.swift in Sources */,
 				4CDEFAEF1987EEC50045EE25 /* PowerSuitCell.swift in Sources */,
 				4CDEFAF3198809870045EE25 /* CellBackgroundView.swift in Sources */,
 				4CDEFAF5198817180045EE25 /* PowerSuitHeader.swift in Sources */,
+				4CE2B0C719967E7200FB99C3 /* NRFManager.swift in Sources */,
 				4C6B0A1119878D1B00A99A2E /* SoundPlayer.swift in Sources */,
+				4CE2B0CD199685FB00FB99C3 /* FeedbackTextView.swift in Sources */,
 				4C6B09E3198785F400A99A2E /* AppDelegate.swift in Sources */,
 				4C6B0A04198786E900A99A2E /* PowerSuitItems.swift in Sources */,
 			);
