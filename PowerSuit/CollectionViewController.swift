@@ -97,6 +97,9 @@ extension CollectionViewController:NRFManagerDelegate {
                 }),
                 PowerSuitSoundItem(title: "Description", hue:0.45, sound: "description.wav", type:SoundType.Voice),
                 PowerSuitSoundItem(title: "Future", hue:0.45, sound: "voice_welcome_future.wav", type:SoundType.Voice),
+                PowerSuitSoundItem(title: "Yes", hue:0.45, sound: "voice_yes.wav", type:SoundType.Voice),
+                PowerSuitSoundItem(title: "No", hue:0.45, sound: "voice_no.wav", type:SoundType.Voice),
+                PowerSuitSoundItem(title: "No Answer", hue:0.45, sound: "voice_no_answer.wav", type:SoundType.Voice),
             ]),
             Section(name: "Effects", items: [
                 PowerSuitActionItem(title: "Randomize Effects", hue:1, saturation:0, action: {
@@ -328,19 +331,42 @@ extension CollectionViewController {
     func nrfReceivedData(nrfManager:NRFManager, data:NSData, string:String)
     {
         switch string {
-            case "WING_ENABLE":
+            case "WINGS_ENABLED":
                 self.soundVoicePlayer.queueSound("voice_wings_enabled.wav")
                 feedbackTextView.addMessage("Wings Enabled", color: UIColor.yellowColor())
 
-            case "WING_DISABLE":
+            case "WINGS_DISABLED":
                 self.soundVoicePlayer.queueSound("voice_wings_disabled.wav")
                 feedbackTextView.addMessage("Wings Disabled", color: UIColor.yellowColor())
+     
+            case "WINGS_BOTH_UP":
+                self.soundVoicePlayer.queueSound("voice_both_wings_up.wav")
+                feedbackTextView.addMessage("Both Wings Up", color: UIColor.yellowColor())
 
-        default:
-            // FIXME: should get own info string
-            self.soundVoicePlayer.queueSound("voice_light_adjusted.wav")
-            println("PowerSuit Data: \(string)")
-            feedbackTextView.addMessage(string, color: UIColor.yellowColor())
+            case "EFFECT_MODE_LOOP":
+                self.soundVoicePlayer.queueSound("voice_scanning.wav")
+                feedbackTextView.addMessage("Scanning", color: UIColor.yellowColor())
+
+            case "EFFECT_MODE_SPARKLE":
+                self.soundVoicePlayer.queueSound("voice_sparkle.wav")
+                feedbackTextView.addMessage("Measuring Radiation", color: UIColor.yellowColor())
+
+            case "EFFECT_MODE_VU":
+                self.soundVoicePlayer.queueSound("voice_vu.wav")
+                feedbackTextView.addMessage("Spectrum Analyzer", color: UIColor.yellowColor())
+            
+            case "EFFECT_MODE_PLASMA":
+                self.soundVoicePlayer.queueSound("voice_plasma.wav")
+                feedbackTextView.addMessage("Plasma mode initiated", color: UIColor.yellowColor())
+                
+            case "EFFECT_MODE_NONE":
+                self.soundVoicePlayer.queueSound("voice_laser_power_off.wav")
+                feedbackTextView.addMessage("Lasers Powered Off", color: UIColor.yellowColor())
+                
+            
+            default:
+                println("PowerSuit Data: \(string)")
+                feedbackTextView.addMessage(string, color: UIColor(white: 0.75, alpha: 1))
         }
         
     }

@@ -22,7 +22,7 @@
 		<key>50CD0340BC1E88DD7047862D4173FE7A2EB2A56D</key>
 		<string>../..</string>
 		<key>D451D584F85F28E4FD1687969E33460BB0E682FB</key>
-		<string>../../../../OpenSourced/nRF8001-Swift</string>
+		<string>../../../OpenSourced/nRF8001-Swift</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/MichMich/PowerSuit.git</string>
