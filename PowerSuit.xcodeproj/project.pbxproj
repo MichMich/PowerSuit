@@ -26,6 +26,30 @@
 		4C6B0A1119878D1B00A99A2E /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6B0A1019878D1B00A99A2E /* SoundPlayer.swift */; };
 		4C70F8461987A0E400DF598B /* transformers.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4C70F8451987A0E400DF598B /* transformers.wav */; };
 		4C70F8491987A1B600DF598B /* robot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4C70F8481987A1B600DF598B /* robot.wav */; };
+		4C7A43DB19A200970044D579 /* 8bit2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4C7A43CD19A200970044D579 /* 8bit2.wav */; };
+		4C7A43DC19A200970044D579 /* activate_exit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4C7A43CE19A200970044D579 /* activate_exit.wav */; };
+		4C7A43DD19A200970044D579 /* activate.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4C7A43CF19A200970044D579 /* activate.wav */; };
+		4C7A43DE19A200970044D579 /* feedback.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4C7A43D019A200970044D579 /* feedback.wav */; };
+		4C7A43DF19A200970044D579 /* flyby.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4C7A43D119A200970044D579 /* flyby.wav */; };
+		4C7A43E019A200970044D579 /* glitch.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4C7A43D219A200970044D579 /* glitch.wav */; };
+		4C7A43E119A200970044D579 /* laser.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4C7A43D319A200970044D579 /* laser.wav */; };
+		4C7A43E219A200970044D579 /* levelup.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4C7A43D419A200970044D579 /* levelup.wav */; };
+		4C7A43E319A200970044D579 /* menu1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4C7A43D519A200970044D579 /* menu1.wav */; };
+		4C7A43E419A200970044D579 /* robotic.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4C7A43D619A200970044D579 /* robotic.wav */; };
+		4C7A43E519A200970044D579 /* runner.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4C7A43D719A200970044D579 /* runner.wav */; };
+		4C7A43E619A200970044D579 /* siren.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C7A43D819A200970044D579 /* siren.mp3 */; };
+		4C7A43E719A200970044D579 /* snes.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4C7A43D919A200970044D579 /* snes.wav */; };
+		4C7A43E819A200970044D579 /* ui.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4C7A43DA19A200970044D579 /* ui.wav */; };
+		4C7A43F319A205FE0044D579 /* 2034.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C7A43E919A205FE0044D579 /* 2034.aiff */; };
+		4C7A43F419A205FE0044D579 /* armour.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C7A43EA19A205FE0044D579 /* armour.aiff */; };
+		4C7A43F519A205FE0044D579 /* connection.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C7A43EB19A205FE0044D579 /* connection.aiff */; };
+		4C7A43F619A205FE0044D579 /* initializing.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C7A43EC19A205FE0044D579 /* initializing.aiff */; };
+		4C7A43F719A205FE0044D579 /* message.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C7A43ED19A205FE0044D579 /* message.aiff */; };
+		4C7A43F819A205FE0044D579 /* overloading.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C7A43EE19A205FE0044D579 /* overloading.aiff */; };
+		4C7A43F919A205FE0044D579 /* power.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C7A43EF19A205FE0044D579 /* power.aiff */; };
+		4C7A43FA19A205FE0044D579 /* shields.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C7A43F019A205FE0044D579 /* shields.aiff */; };
+		4C7A43FB19A205FE0044D579 /* upgrade.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C7A43F119A205FE0044D579 /* upgrade.aiff */; };
+		4C7A43FC19A205FE0044D579 /* warp.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C7A43F219A205FE0044D579 /* warp.aiff */; };
 		4CB749F919894B390066620C /* bluefade_pixel.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4CB749F819894B370066620C /* bluefade_pixel.mp4 */; };
 		4CB7837F1987C92600E622A0 /* beat.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 4CB7837E1987C92600E622A0 /* beat.aiff */; };
 		4CB783821987CDAE00E622A0 /* beep.aif in Resources */ = {isa = PBXBuildFile; fileRef = 4CB783801987CDAE00E622A0 /* beep.aif */; };
@@ -97,6 +121,30 @@
 		4C6B0A1019878D1B00A99A2E /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		4C70F8451987A0E400DF598B /* transformers.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = transformers.wav; sourceTree = "<group>"; };
 		4C70F8481987A1B600DF598B /* robot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = robot.wav; sourceTree = "<group>"; };
+		4C7A43CD19A200970044D579 /* 8bit2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 8bit2.wav; sourceTree = "<group>"; };
+		4C7A43CE19A200970044D579 /* activate_exit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = activate_exit.wav; sourceTree = "<group>"; };
+		4C7A43CF19A200970044D579 /* activate.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = activate.wav; sourceTree = "<group>"; };
+		4C7A43D019A200970044D579 /* feedback.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = feedback.wav; sourceTree = "<group>"; };
+		4C7A43D119A200970044D579 /* flyby.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flyby.wav; sourceTree = "<group>"; };
+		4C7A43D219A200970044D579 /* glitch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = glitch.wav; sourceTree = "<group>"; };
+		4C7A43D319A200970044D579 /* laser.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = laser.wav; sourceTree = "<group>"; };
+		4C7A43D419A200970044D579 /* levelup.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = levelup.wav; sourceTree = "<group>"; };
+		4C7A43D519A200970044D579 /* menu1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = menu1.wav; sourceTree = "<group>"; };
+		4C7A43D619A200970044D579 /* robotic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = robotic.wav; sourceTree = "<group>"; };
+		4C7A43D719A200970044D579 /* runner.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = runner.wav; sourceTree = "<group>"; };
+		4C7A43D819A200970044D579 /* siren.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = siren.mp3; sourceTree = "<group>"; };
+		4C7A43D919A200970044D579 /* snes.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = snes.wav; sourceTree = "<group>"; };
+		4C7A43DA19A200970044D579 /* ui.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ui.wav; sourceTree = "<group>"; };
+		4C7A43E919A205FE0044D579 /* 2034.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = 2034.aiff; sourceTree = "<group>"; };
+		4C7A43EA19A205FE0044D579 /* armour.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = armour.aiff; sourceTree = "<group>"; };
+		4C7A43EB19A205FE0044D579 /* connection.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = connection.aiff; sourceTree = "<group>"; };
+		4C7A43EC19A205FE0044D579 /* initializing.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = initializing.aiff; sourceTree = "<group>"; };
+		4C7A43ED19A205FE0044D579 /* message.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = message.aiff; sourceTree = "<group>"; };
+		4C7A43EE19A205FE0044D579 /* overloading.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = overloading.aiff; sourceTree = "<group>"; };
+		4C7A43EF19A205FE0044D579 /* power.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = power.aiff; sourceTree = "<group>"; };
+		4C7A43F019A205FE0044D579 /* shields.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = shields.aiff; sourceTree = "<group>"; };
+		4C7A43F119A205FE0044D579 /* upgrade.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = upgrade.aiff; sourceTree = "<group>"; };
+		4C7A43F219A205FE0044D579 /* warp.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = warp.aiff; sourceTree = "<group>"; };
 		4CB749F819894B370066620C /* bluefade_pixel.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = bluefade_pixel.mp4; sourceTree = "<group>"; };
 		4CB7837E1987C92600E622A0 /* beat.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = beat.aiff; sourceTree = "<group>"; };
 		4CB783801987CDAE00E622A0 /* beep.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = beep.aif; sourceTree = "<group>"; };
@@ -230,6 +278,20 @@
 		4C70F8441987A0E400DF598B /* effects */ = {
 			isa = PBXGroup;
 			children = (
+				4C7A43CD19A200970044D579 /* 8bit2.wav */,
+				4C7A43CE19A200970044D579 /* activate_exit.wav */,
+				4C7A43CF19A200970044D579 /* activate.wav */,
+				4C7A43D019A200970044D579 /* feedback.wav */,
+				4C7A43D119A200970044D579 /* flyby.wav */,
+				4C7A43D219A200970044D579 /* glitch.wav */,
+				4C7A43D319A200970044D579 /* laser.wav */,
+				4C7A43D419A200970044D579 /* levelup.wav */,
+				4C7A43D519A200970044D579 /* menu1.wav */,
+				4C7A43D619A200970044D579 /* robotic.wav */,
+				4C7A43D719A200970044D579 /* runner.wav */,
+				4C7A43D819A200970044D579 /* siren.mp3 */,
+				4C7A43D919A200970044D579 /* snes.wav */,
+				4C7A43DA19A200970044D579 /* ui.wav */,
 				4C4A7784198A685B00877F89 /* 8bit.wav */,
 				4C4A7785198A685B00877F89 /* cancel.wav */,
 				4C4A7786198A685B00877F89 /* teleport.wav */,
@@ -244,6 +306,16 @@
 		4C70F8471987A0E800DF598B /* voice */ = {
 			isa = PBXGroup;
 			children = (
+				4C7A43E919A205FE0044D579 /* 2034.aiff */,
+				4C7A43EA19A205FE0044D579 /* armour.aiff */,
+				4C7A43EB19A205FE0044D579 /* connection.aiff */,
+				4C7A43EC19A205FE0044D579 /* initializing.aiff */,
+				4C7A43ED19A205FE0044D579 /* message.aiff */,
+				4C7A43EE19A205FE0044D579 /* overloading.aiff */,
+				4C7A43EF19A205FE0044D579 /* power.aiff */,
+				4C7A43F019A205FE0044D579 /* shields.aiff */,
+				4C7A43F119A205FE0044D579 /* upgrade.aiff */,
+				4C7A43F219A205FE0044D579 /* warp.aiff */,
 				4CDCD6181997C7C900BBADA2 /* voice_laser_power_off.aiff */,
 				4CDCD61A1997C7EE00BBADA2 /* voice_laser_power_off.wav */,
 				4CDCD6081997C5A700BBADA2 /* voice_both_wings_up.wav */,
@@ -370,28 +442,47 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C6B0A0D19878CE400A99A2E /* sound5.aiff in Resources */,
+				4C7A43E219A200970044D579 /* levelup.wav in Resources */,
+				4C7A43E819A200970044D579 /* ui.wav in Resources */,
 				4CB783941987D03F00E622A0 /* right_wing_down.aiff in Resources */,
+				4C7A43DB19A200970044D579 /* 8bit2.wav in Resources */,
 				4CDCD6131997C5A700BBADA2 /* voice_plasma.wav in Resources */,
+				4C7A43F319A205FE0044D579 /* 2034.aiff in Resources */,
 				4CB7837F1987C92600E622A0 /* beat.aiff in Resources */,
+				4C7A43DE19A200970044D579 /* feedback.wav in Resources */,
 				4C6B09E8198785F400A99A2E /* Main.storyboard in Resources */,
 				4C4A7788198A685B00877F89 /* cancel.wav in Resources */,
 				4CDCD6151997C5A700BBADA2 /* voice_sparkle.wav in Resources */,
 				4CB783951987D03F00E622A0 /* right_wing_up.aiff in Resources */,
+				4C7A43DC19A200970044D579 /* activate_exit.wav in Resources */,
+				4C7A43E519A200970044D579 /* runner.wav in Resources */,
 				4CB749F919894B390066620C /* bluefade_pixel.mp4 in Resources */,
+				4C7A43E619A200970044D579 /* siren.mp3 in Resources */,
+				4C7A43F419A205FE0044D579 /* armour.aiff in Resources */,
 				4CDCD6141997C5A700BBADA2 /* voice_scanning.wav in Resources */,
 				4CB783881987CF3F00E622A0 /* swoosh.wav in Resources */,
 				4C70F8461987A0E400DF598B /* transformers.wav in Resources */,
 				4C70F8491987A1B600DF598B /* robot.wav in Resources */,
 				4CE2B0CA1996816200FB99C3 /* voice_wings_disabled.wav in Resources */,
+				4C7A43F519A205FE0044D579 /* connection.aiff in Resources */,
 				4CB783921987D03F00E622A0 /* left_wing_down.aiff in Resources */,
 				4CB783891987CF3F00E622A0 /* ufo.wav in Resources */,
 				4CDCD61B1997C7EE00BBADA2 /* voice_laser_power_off.wav in Resources */,
+				4C7A43FA19A205FE0044D579 /* shields.aiff in Resources */,
+				4C7A43E119A200970044D579 /* laser.wav in Resources */,
 				4CE2B0D81996B35800FB99C3 /* voice_color_adjusted.wav in Resources */,
 				4CDCD6101997C5A700BBADA2 /* voice_both_wings_up.wav in Resources */,
+				4C7A43F819A205FE0044D579 /* overloading.aiff in Resources */,
+				4C7A43FC19A205FE0044D579 /* warp.aiff in Resources */,
 				4CB783931987D03F00E622A0 /* left_wing_up.aiff in Resources */,
 				4C4A7789198A685B00877F89 /* teleport.wav in Resources */,
 				4CE2B0D91996B35800FB99C3 /* voice_light_adjusted.wav in Resources */,
+				4C7A43E719A200970044D579 /* snes.wav in Resources */,
 				4C4A778E198A686100877F89 /* voice_disconnected.wav in Resources */,
+				4C7A43DD19A200970044D579 /* activate.wav in Resources */,
+				4C7A43DF19A200970044D579 /* flyby.wav in Resources */,
+				4C7A43E019A200970044D579 /* glitch.wav in Resources */,
+				4C7A43FB19A205FE0044D579 /* upgrade.aiff in Resources */,
 				4C6B0A0F19878CE400A99A2E /* sound1.aiff in Resources */,
 				4C6B0A0E19878CE400A99A2E /* sound2.aiff in Resources */,
 				4CDCD6171997C5A700BBADA2 /* voice_yes.wav in Resources */,
@@ -403,15 +494,20 @@
 				4CDCD6111997C5A700BBADA2 /* voice_no_answer.wav in Resources */,
 				4CDCD6121997C5A700BBADA2 /* voice_no.wav in Resources */,
 				4C6B09EA198785F400A99A2E /* Images.xcassets in Resources */,
+				4C7A43F719A205FE0044D579 /* message.aiff in Resources */,
 				4CB783821987CDAE00E622A0 /* beep.aif in Resources */,
 				4CB783831987CDAE00E622A0 /* radioscatter.wav in Resources */,
 				4CB783901987D03F00E622A0 /* both_wings_down.aiff in Resources */,
 				4C4A778F198A686100877F89 /* voice_welcome_future.wav in Resources */,
 				4C6B0A0B19878CE400A99A2E /* sound4.aiff in Resources */,
+				4C7A43F619A205FE0044D579 /* initializing.aiff in Resources */,
 				4CB783911987D03F00E622A0 /* both_wings_up.aiff in Resources */,
 				4C6B0A0C19878CE400A99A2E /* sound3.aiff in Resources */,
+				4C7A43F919A205FE0044D579 /* power.aiff in Resources */,
 				4CDCD6191997C7C900BBADA2 /* voice_laser_power_off.aiff in Resources */,
 				4C4A778D198A686100877F89 /* voice_connected.wav in Resources */,
+				4C7A43E319A200970044D579 /* menu1.wav in Resources */,
+				4C7A43E419A200970044D579 /* robotic.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

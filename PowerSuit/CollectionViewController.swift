@@ -21,9 +21,9 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
 
     let moviePlayerController=MPMoviePlayerController(contentURL: NSBundle.mainBundle().URLForResource("bluefade_pixel", withExtension: "mp4"))
 
-    let soundVoicePlayer = SoundPlayer()
-    let soundEffectPlayer = SoundPlayer()
-    let soundBackgroundLoopPlayer = SoundPlayer()
+    var soundVoicePlayer = SoundPlayer()
+    var soundEffectPlayer = SoundPlayer()
+    var soundBackgroundLoopPlayer = SoundPlayer()
     
     var sectionNames:[String] = []
     var sections:[Section] = []
@@ -82,24 +82,46 @@ extension CollectionViewController:NRFManagerDelegate {
                 PowerSuitSoundItem(title: "Beep", hue:0.4, sound: "beep.aif", type:SoundType.BackgroundLoop),
                 PowerSuitSoundItem(title: "Radioscatter", hue:0.4, sound: "radioscatter.wav", type:SoundType.BackgroundLoop)
             ]),
-            Section(name: "Voices", items: [
+            Section(name: "Voice", items: [
+                PowerSuitSoundItem(title: "Description", hue:0.45, sound: "description.wav", type:SoundType.Voice),
+                PowerSuitSoundItem(title: "Yes", hue:0.45, sound: "voice_yes.wav", type:SoundType.Voice),
+                PowerSuitSoundItem(title: "No", hue:0.45, sound: "voice_no.wav", type:SoundType.Voice),
+                PowerSuitSoundItem(title: "No Answer", hue:0.45, sound: "voice_no_answer.wav", type:SoundType.Voice),
+            ]),
+            Section(name: "System", items: [
                 PowerSuitActionItem(title: "Randomize Effects", hue:1, saturation:0, action: {
                     (sectionItem:PowerSuitActionItem)->() in
                     
                     sectionItem.active = !sectionItem.active
                     if (sectionItem.active) {
                         self.soundVoicePlayer.startRandomPlaylist([
-                            "voice_welcome_future.wav"
-                        ], withMinimumInterval: 10, maximumInterval:20)
+                            "voice_welcome_future.wav",
+                            "2034.aiff",
+                            "armour.aiff",
+                            "connection.aiff",
+                            "initializing.aiff",
+                            "message.aiff",
+                            "overloading.aiff",
+                            "power.aiff",
+                            "shields.aiff",
+                            "upgrade.aiff",
+                            "warp.aiff"
+                            ], withMinimumInterval: 10, maximumInterval:20)
                     } else {
                         self.soundVoicePlayer.stopRandomPlaylist()
                     }
                 }),
-                PowerSuitSoundItem(title: "Description", hue:0.45, sound: "description.wav", type:SoundType.Voice),
                 PowerSuitSoundItem(title: "Future", hue:0.45, sound: "voice_welcome_future.wav", type:SoundType.Voice),
-                PowerSuitSoundItem(title: "Yes", hue:0.45, sound: "voice_yes.wav", type:SoundType.Voice),
-                PowerSuitSoundItem(title: "No", hue:0.45, sound: "voice_no.wav", type:SoundType.Voice),
-                PowerSuitSoundItem(title: "No Answer", hue:0.45, sound: "voice_no_answer.wav", type:SoundType.Voice),
+                PowerSuitSoundItem(title: "2034", hue:0.45, sound: "2034.aiff", type:SoundType.Voice),
+                PowerSuitSoundItem(title: "Armour", hue:0.45, sound: "armour.aiff", type:SoundType.Voice),
+                PowerSuitSoundItem(title: "Connection", hue:0.45, sound: "connection.aiff", type:SoundType.Voice),
+                PowerSuitSoundItem(title: "Initializing", hue:0.45, sound: "initializing.aiff", type:SoundType.Voice),
+                PowerSuitSoundItem(title: "Message", hue:0.45, sound: "message.aiff", type:SoundType.Voice),
+                PowerSuitSoundItem(title: "Overloading", hue:0.45, sound: "overloading.aiff", type:SoundType.Voice),
+                PowerSuitSoundItem(title: "Power", hue:0.45, sound: "power.aiff", type:SoundType.Voice),
+                PowerSuitSoundItem(title: "Shields", hue:0.45, sound: "shields.aiff", type:SoundType.Voice),
+                PowerSuitSoundItem(title: "Upgrade", hue:0.45, sound: "upgrade.aiff", type:SoundType.Voice),
+                PowerSuitSoundItem(title: "Warp", hue:0.45, sound: "warp.aiff", type:SoundType.Voice),
             ]),
             Section(name: "Effects", items: [
                 PowerSuitActionItem(title: "Randomize Effects", hue:1, saturation:0, action: {
@@ -111,10 +133,24 @@ extension CollectionViewController:NRFManagerDelegate {
                                 "8bit.wav",
                                 "cancel.wav",
                                 "teleport.wav",
-                                "transformers.wav",
+                                //"transformers.wav",
                                 "robot.wav",
                                 "swoosh.wav",
                                 "ufo.wav",
+                                //"8bit2.wav",
+                                "activate_exit.wav",
+                                //"activate.wav",
+                                "feedback.wav",
+                                "flyby.wav",
+                                "glitch.wav",
+                                "laser.wav",
+                                //"levelup.wav",
+                                "menu1.wav",
+                                //"robotic.wav",
+                                "runner.wav",
+                                "siren.mp3",
+                                "snes.wav",
+                                "ui.wav"
                                 
                             ], withMinimumInterval: 5, maximumInterval:10)
                         } else {
@@ -124,27 +160,63 @@ extension CollectionViewController:NRFManagerDelegate {
                 PowerSuitSoundItem(title: "8bit", hue:0.5, sound: "8bit.wav", type:SoundType.Effect),
                 PowerSuitSoundItem(title: "Cancel", hue:0.5, sound: "cancel.wav", type:SoundType.Effect),
                 PowerSuitSoundItem(title: "Teleport", hue:0.5, sound: "teleport.wav", type:SoundType.Effect),
-                PowerSuitSoundItem(title: "Transformers", hue:0.5, sound: "transformers.wav", type:SoundType.Effect),
+                
                 PowerSuitSoundItem(title: "Robot", hue:0.5, sound: "robot.wav", type:SoundType.Effect),
                 PowerSuitSoundItem(title: "Swoosh", hue:0.5, sound: "swoosh.wav", type:SoundType.Effect),
-                PowerSuitSoundItem(title: "UFO", hue:0.5, sound: "ufo.wav", type:SoundType.Effect)
+                PowerSuitSoundItem(title: "UFO", hue:0.5, sound: "ufo.wav", type:SoundType.Effect),
+
+               
+                PowerSuitSoundItem(title: "Activate & Exit", hue:0.5, sound: "activate_exit.wav", type:SoundType.Effect),
+                
+                
+                PowerSuitSoundItem(title: "Feedback", hue:0.5, sound: "feedback.wav", type:SoundType.Effect),
+                PowerSuitSoundItem(title: "Flyby", hue:0.5, sound: "flyby.wav", type:SoundType.Effect),
+                PowerSuitSoundItem(title: "Glitch", hue:0.5, sound: "glitch.wav", type:SoundType.Effect),
+                PowerSuitSoundItem(title: "Laser", hue:0.5, sound: "laser.wav", type:SoundType.Effect),
+                PowerSuitSoundItem(title: "Menu", hue:0.5, sound: "menu1.wav", type:SoundType.Effect),
+                
+                
+                PowerSuitSoundItem(title: "Runner", hue:0.5, sound: "runner.wav", type:SoundType.Effect),
+                PowerSuitSoundItem(title: "Siren", hue:0.5, sound: "siren.mp3", type:SoundType.Effect),
+                PowerSuitSoundItem(title: "Snes", hue:0.5, sound: "snes.wav", type:SoundType.Effect),
+                PowerSuitSoundItem(title: "UI", hue:0.5, sound: "ui.wav", type:SoundType.Effect),
+                
+                
+                PowerSuitSoundItem(title: "Transformers", hue:0.55, sound: "transformers.wav", type:SoundType.Effect),
+                PowerSuitSoundItem(title: "8bit 2", hue:0.55, sound: "8bit2.wav", type:SoundType.Effect),
+                PowerSuitSoundItem(title: "Activate", hue:0.55, sound: "activate.wav", type:SoundType.Effect),
+                PowerSuitSoundItem(title: "Level up", hue:0.55, sound: "levelup.wav", type:SoundType.Effect),
+                PowerSuitSoundItem(title: "Robotic", hue:0.55, sound: "robotic.wav", type:SoundType.Effect)
+
+                
             ]),
             Section(name: "Actions", items: [
-                PowerSuitActionItem(title: "Clear Sound Queue", hue:1, action: {
+                PowerSuitActionItem(title: "Reconnect", hue:1, action: {
                     
                     (sectionItem:PowerSuitActionItem)->() in
-                    self.soundVoicePlayer.clearQueue()
+                    self.nrfManager.disconnect();
                     
                 }),
                 PowerSuitActionItem(title: "Stop All Sounds", hue:1, action: {
                     
                     (sectionItem:PowerSuitActionItem)->() in
-                    self.soundVoicePlayer.clearQueue()
+                    self.soundVoicePlayer.stopRandomPlaylist()
+                    self.soundEffectPlayer.stopRandomPlaylist()
                     
-                    self.soundVoicePlayer.stop()
-                    self.soundEffectPlayer.stop()
-                    self.soundBackgroundLoopPlayer.stop()
+                     self.soundVoicePlayer = SoundPlayer()
+                     self.soundEffectPlayer = SoundPlayer()
+                     self.soundBackgroundLoopPlayer = SoundPlayer()
+                }),
+                PowerSuitActionItem(title: "Stop Effects", hue:1, action: {
+                    
+                    (sectionItem:PowerSuitActionItem)->() in
+                    self.soundVoicePlayer.stopRandomPlaylist()
+                    self.soundEffectPlayer.stopRandomPlaylist()
+                    
+                    self.soundVoicePlayer = SoundPlayer()
+                    self.soundEffectPlayer = SoundPlayer()
                 })
+               
             ]),
         ]
 
